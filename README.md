@@ -3,7 +3,6 @@ a cpp implementation of sparse biterm topic model, 10x faster than [origin imple
 
 # features:
 * being suitable to model for user-click-sequenece(Rcommandation System) or short-text(NLP), because it assume that adjacent N-items belong to a topic;
-* supprot load last-trained-model and continue training;
 * using sparse-gibbs-sampler, 10x faster than origin implementation;
 
 # arguments:
