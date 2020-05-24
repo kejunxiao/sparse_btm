@@ -15,7 +15,6 @@ _____________________________________
 Parameters:
 * -input <file>  
 	path of docs file, lines of file look like "word1 word2 word3 ... \n"  
-	word is <string>, freq is <int>, represent word-freqence in the document  
 * -output <dir>  
 	dir of model(topic_biterm_sum, topic_word) file  
 * -num_topics <int>  
