@@ -366,7 +366,7 @@ void initBitermsByInitModel() {
     smooth = initS(sbucket, bb, denominators);
 
     // iterate documents
-    printf("start init biterms by init model:");
+    printf("start init biterms by init model:\n");
     gettimeofday(&tv1, NULL);
     for (a = 0; a < num_docs; a++) { // a is docid
         if (a > 0 && a % 10000 == 0) {
@@ -501,7 +501,7 @@ void initBiterms() {
     TokenEntry *token_entry1, *token_entry2;
     WordEntry *word_entry1, *word_entry2;
 
-    printf("start init biterms:");
+    printf("start init biterms:\n");
     gettimeofday(&tv1, NULL);
     for (a = 0; a < num_docs; a++) {
         if (a > 0 && a % 10000 == 0) {
