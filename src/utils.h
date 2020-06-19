@@ -13,7 +13,6 @@
  * MAX limit 
  */
 #define MAX_STRING 1024
-#define MAX_DOC_LEN 1024
 
 /*
  * type
