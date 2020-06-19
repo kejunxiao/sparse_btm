@@ -79,7 +79,7 @@ static uint32 getIdFromWord(const char *word) {
 
 inline static int genRandTopicId() { return rand() % num_topics; }
 
-/* sparse LDA process */
+/* sparse-biterm-topic-model process */
 // denominators
 static void initDenomin(real *denominators, real Vbeta) {
     int t;
@@ -769,11 +769,12 @@ int main(int argc, char **argv) {
     }
 
     // gibbs sampling
-    printf("start train LDA:\n");
+    printf("start train biterm-topic-model:\n");
     for (a = 0; a < num_iters; a++) {
         if (save_step > 0 && a % save_step == 0) saveModel(a);
         gibbsSample(a);
     }
+    printf("finished train.\n");
 
     // save model
     saveModel(num_iters);
