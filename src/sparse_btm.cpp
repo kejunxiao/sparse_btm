@@ -774,7 +774,7 @@ int main(int argc, char **argv) {
         if (save_step > 0 && a % save_step == 0) saveModel(a);
         gibbsSample(a);
     }
-    printf("finished train.\n");
+    printf("\nfinished train.\n");
 
     // save model
     saveModel(num_iters);
