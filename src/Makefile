@@ -1,5 +1,5 @@
-CPP=g++ -std=c++0x -O3
-CFLAGS=-Wall -Wextra -Wno-sign-conversion -Wno-sign-compare -Wno-unused-parameter -pedantic-errors -pipe -fPIC -g
+CPP=g++ -std=c++11 -O3
+CFLAGS=-Wall -Wextra -Wno-sign-conversion -Wno-sign-compare -Wno-unused-parameter -pedantic-errors -pipe -fPIC
 
 all: sparse_btm
 
