@@ -73,7 +73,7 @@ static uint32 getIdFromWord(const char *word) {
         word2id[s] = vocab_size;
         id2word[vocab_size] = s;
         vocab_size++;
-        return vocab_size;
+        return word2id[s];
     }
 }
 
