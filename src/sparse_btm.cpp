@@ -366,6 +366,7 @@ void initBitermsByInitModel() {
     smooth = initS(sbucket, bb, denominators);
 
     // iterate documents
+    printf("start init biterms by init model:\n");
     gettimeofday(&tv1, NULL);
     for (a = 0; a < num_docs; a++) { // a is docid
         if (a > 0 && a % 10000 == 0) {
@@ -482,6 +483,7 @@ void initBitermsByInitModel() {
     free(sbucket);
     free(w1bucket);
     free(w2bucket);
+    printf("\nfinished init biterms.\n");
 }
 
 void freeInitModel() {
@@ -499,6 +501,7 @@ void initBiterms() {
     TokenEntry *token_entry1, *token_entry2;
     WordEntry *word_entry1, *word_entry2;
 
+    printf("start init biterms:\n");
     gettimeofday(&tv1, NULL);
     for (a = 0; a < num_docs; a++) {
         if (a > 0 && a % 10000 == 0) {
@@ -527,6 +530,7 @@ void initBiterms() {
             }
         }
     }
+    printf("\nfinished init biterms.\n");
 }
 
 void gibbsSample(uint32 round) {
@@ -756,16 +760,13 @@ int main(int argc, char **argv) {
     loadDocs();
     // init biterms
     if (strlen(init_tb_model) > 0 && strlen(init_tw_model) > 0) {
-        printf("start init biterms by init model:\n");
         allocateInitModel();
         loadInitModel();
         initBitermsByInitModel();
         freeInitModel();
     } else {
-        printf("start init biterms:\n");
         initBiterms();
     }
-    printf("\nfinished init biterms.\n");
 
     // gibbs sampling
     printf("start train biterm-topic-model:\n");
